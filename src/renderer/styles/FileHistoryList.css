@@ -1,0 +1,104 @@
+.file-history-list {
+  margin-top: 20px;
+  border-radius: var(--card-radius);
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.file-history-list:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.file-history-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.file-history-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.file-history-count {
+  font-size: 12px;
+  background-color: var(--bg-tertiary);
+  padding: 4px 8px;
+  border-radius: 12px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.file-history-items {
+  padding: 16px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.file-history-more {
+  text-align: center;
+  padding: 10px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  background-color: var(--bg-secondary);
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.file-history-empty {
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--text-secondary);
+  background-color: var(--bg-secondary);
+  border-radius: var(--card-radius);
+  border: 1px dashed var(--border-color);
+  font-style: italic;
+}
+
+/* Customize scrollbar for the file history list */
+.file-history-items::-webkit-scrollbar {
+  width: 8px;
+}
+
+.file-history-items::-webkit-scrollbar-track {
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+}
+
+.file-history-items::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+.file-history-items::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Dark mode specific styles */
+[data-theme="dark"] .file-history-list {
+  background: var(--card-bg);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .file-history-header {
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .file-history-count {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .file-history-more {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .file-history-empty {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-color: var(--border-color);
+}

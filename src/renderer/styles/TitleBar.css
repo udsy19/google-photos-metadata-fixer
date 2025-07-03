@@ -1,0 +1,161 @@
+.title-bar {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  -webkit-app-region: drag;
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.title-bar-drag-area {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  gap: 12px;
+  /* Add extra space for macOS window controls */
+  padding-left: 80px; 
+}
+
+.app-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.app-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.title-bar-controls {
+  display: flex;
+  align-items: center;
+  -webkit-app-region: no-drag;
+  height: 100%;
+}
+
+.theme-toggle-button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 6px 14px;
+  margin-right: 8px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  height: 32px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+
+.theme-toggle-button:hover {
+  background-color: var(--bg-tertiary);
+  transform: translateY(-1px);
+}
+
+.theme-toggle-button:active {
+  transform: translateY(0px);
+}
+
+.window-controls {
+  display: flex;
+  height: 100%;
+}
+
+.window-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 100%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.window-control::before,
+.window-control::after {
+  content: '';
+  position: absolute;
+  background-color: var(--text-secondary);
+  transition: background-color 0.2s ease;
+}
+
+.window-control:hover {
+  background-color: var(--bg-tertiary);
+}
+
+.window-control.minimize::before {
+  width: 12px;
+  height: 1px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.window-control.maximize::before {
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--text-secondary);
+  background-color: transparent;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.window-control.close {
+  transition: background-color 0.15s ease;
+}
+
+.window-control.close:hover {
+  background-color: #ff5f57;
+}
+
+.window-control.close::before,
+.window-control.close::after {
+  width: 12px;
+  height: 1px;
+  top: 50%;
+  left: 50%;
+}
+
+.window-control.close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.window-control.close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.window-control.close:hover::before,
+.window-control.close:hover::after {
+  background-color: white;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

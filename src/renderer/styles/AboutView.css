@@ -1,0 +1,156 @@
+.about-view {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-view h1 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-primary);
+  position: relative;
+}
+
+.about-view h1::before {
+  content: 'ℹ️';
+  font-size: 30px;
+  margin-right: 8px;
+  animation: pulse 2s infinite;
+}
+
+.about-card {
+  background-color: var(--card-bg);
+  border-radius: var(--card-radius);
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 28px;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+  animation: fadeIn 0.3s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-card-hero {
+  display: flex;
+  align-items: center;
+  margin-bottom: 28px;
+  gap: 24px;
+}
+
+.app-logo-large {
+  font-size: 64px;
+  animation: pulse 3s infinite;
+  background-color: var(--bg-secondary);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
+}
+
+.app-info {
+  flex: 1;
+}
+
+.app-name {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--accent-primary);
+}
+
+.app-description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.app-version {
+  display: inline-block;
+  padding: 4px 10px;
+  background-color: var(--bg-secondary);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.about-section {
+  margin-bottom: 32px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.about-section h2 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.about-section p {
+  line-height: 1.7;
+  margin-bottom: 16px;
+  font-size: 15px;
+}
+
+.about-section ul {
+  margin-left: 24px;
+  margin-bottom: 20px;
+  list-style-type: none;
+}
+
+.about-section li {
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 28px;
+  font-size: 15px;
+}
+
+.about-section li::before {
+  content: '✓';
+  color: var(--accent-primary);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.about-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.project-link:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.license-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: var(--bg-tertiary);
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+}
